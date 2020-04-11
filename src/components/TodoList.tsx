@@ -6,12 +6,8 @@ import { Button } from 'antd';
 
 import './TodoList.css';
 
-interface TodoListProps {
-  items: { id: string; text: string }[];
-  onDeleteTodo: (id: string) => void;
-}
 
-const TodoList: React.FC<TodoListProps> = (props) => {
+const TodoList: React.FC = () => {
   const { todos, fetchTodos, delTodo } = useContext(TodoContext)!;
 
   useEffect(() => {

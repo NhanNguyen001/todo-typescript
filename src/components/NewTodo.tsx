@@ -5,15 +5,15 @@ import { TodoContext, Todo } from './context/todoContext';
 
 import './NewTodo.css';
 
-type NewTodoProps = {
-  onAddTodo: (todoText: string) => void;
-};
+// type NewTodoProps = {
+//   onAddTodo: (todoText: string) => void;
+// };
 
 interface HandleNameChangeInterface {
   target: HTMLInputElement;
 }
 
-const NewTodo: React.FC<NewTodoProps> = (props) => {
+const NewTodo: React.FC = () => {
   const [value, setValue] = useState<Todo>({ title: '' });
   const { title } = value;
   const { addTodo } = useContext(TodoContext)!;
